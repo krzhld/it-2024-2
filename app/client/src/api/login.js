@@ -1,25 +1,24 @@
-import status from './status';
+import statusResponse from './status';
 import error from './error';
 
 export default function login(body) {
     const {email, password} = body;
-
     if (email === '') {
         return {
-            status: status.failed,
-            body: error.emptyEmail
+            status: statusResponse.failed,
+            body: error.emptyEmail,
         }
     }
 
     if (password === '') {
         return {
-            status: status.failed,
-            body: error.emptyPassword
+            status: statusResponse.failed,
+            body: error.emptyPassword,
         }
     }
 
     return {
-        status: status.ok,
-        body: 'authorization was successful'
+        status: statusResponse.ok,
+        body: 'authorization was successful',
     }
 }

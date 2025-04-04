@@ -37,10 +37,10 @@ export default class LoginForm {
     }
 
     _onBtnClickLogin = () => {
-        debugger;
+        //debugger;
         const email = this._el_form_login.getEmail();
         const password = this._el_form_login.getPassword();
-        my_fetch('api/v1/login', {email, password});
+        console.log(my_fetch('api/v1/login', {email, password}));
     }
 
     _onBtnClickSignUp = () => {

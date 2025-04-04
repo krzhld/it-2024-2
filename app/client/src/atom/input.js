@@ -23,9 +23,7 @@ export default class Input {
         )
     }
 
-    getInputText = () => {
-        this._el_input.value;
-    }
+    getInputText = () => this._el_input.value;
 
     updateLabel = (label) => {
         if (typeof label === 'string') {

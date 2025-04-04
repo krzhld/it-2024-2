@@ -1,4 +1,4 @@
-import status from './status';
+import statusResponse from './status';
 import error from './error';
 
 export default function registration(body) {
@@ -6,27 +6,27 @@ export default function registration(body) {
 
     if (email === '') {
         return {
-            status: status.failed,
+            status: statusResponse.failed,
             body: error.emptyEmail
         }
     }
 
     if (password === '') {
         return {
-            status: status.failed,
+            status: statusResponse.failed,
             body: error.emptyPassword
         }
     }
 
     if (!(password === passwordRepeat)) {
         return {
-            status: status.failed,
+            status: statusResponse.failed,
             body: error.differentPasswords,
         }
     }
 
     return {
-        status: status.ok,
+        status: statusResponse.ok,
         body: 'registration was successful'
     }
 }

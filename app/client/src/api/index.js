@@ -1,6 +1,6 @@
-import status from './status';
 import login from './login';
 import registration from './registration';
+import statusResponse from './status';
 
 export default function my_fetch(url, body) {
     switch(url) {
@@ -10,7 +10,7 @@ export default function my_fetch(url, body) {
             return registration(body);
         default:
             return {
-                status: status.sys_error,
+                status: statusResponse.sys_error,
                 body: "system error has occured"
             }
     }

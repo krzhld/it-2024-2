@@ -28,11 +28,11 @@ export default class RegForm {
     }
 
     _onBtnClickSignUp = () => {
+        //debugger;
         const email = this._el_form_login.getEmail();
         const password = this._el_form_login.getPassword();
         const passwordRepeat = this._el_repeat_password.getInputText();
-        debugger;
-        my_fetch('api/v1/registration', {email, password, passwordRepeat});
+        console.log(my_fetch('api/v1/registration', {email, password, passwordRepeat}));
     }
 
     _onBtnClickLogin = () => {

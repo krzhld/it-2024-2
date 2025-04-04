@@ -18,13 +18,9 @@ export default class LoginAndPassForm {
         commonEventManager.subscribe('changeLang', this._eventChangeLang);
     }
 
-    getEmail = () => {
-        this._el_login.getInputText();
-    }
+    getEmail = () => this._el_login.getInputText();
 
-    getPassword = () => {
-        this._el_password.getInputText();
-    }
+    getPassword = () => this._el_password.getInputText();
 
     _eventChangeLang = (lang) => {
         this._el_login.updateLabel(t9n(lang, 'LOGIN'));
